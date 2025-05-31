@@ -17,11 +17,12 @@ a:hover {
 
 /* === Hero === */
 .hero {
-  background: linear-gradient(135deg, #4506cb, #b027f4);
+  background: url("assets/bannerbackground.png") no-repeat center center;
+  background-size: cover;
   padding: 4rem 2rem;
   text-align: center;
   color: white;
-  box-shadow: 0 0 40px rgba(176, 39, 244, 0.4);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
 }
 .hero-content {
   max-width: 700px;
