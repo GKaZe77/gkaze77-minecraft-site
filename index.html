@@ -19,6 +19,27 @@
     }
     window.onload = fetchStatus;
   </script>
+  <style>
+    .tier-cards .price {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .card h3::before {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    .card.stone h3::before { content: "🪨"; }
+    .card.iron h3::before { content: "⚙️"; }
+    .card.diamond h3::before { content: "💎"; }
+    .card.god h3::before { content: "🏛️"; }
+    .card li::after {
+      font-size: 0.75rem;
+      color: #888;
+      margin-left: 0.25rem;
+    }
+    .card li[data-type="discord"]::after { content: "(Discord)"; }
+    .card li[data-type="server"]::after { content: "(Server)"; }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -51,10 +72,10 @@
           <h3>Stone Tier – $3</h3>
           <div class="price">Cosmetic Supporter</div>
           <ul>
-            <li>Discord role + colored name</li>
-            <li>JourneyMap server sync</li>
-            <li>Early patch previews & changelogs</li>
-            <li>Private Discord voting channel</li>
+            <li data-type="discord">Discord role + colored name</li>
+            <li data-type="server">JourneyMap server sync</li>
+            <li data-type="discord">Early patch previews & changelogs</li>
+            <li data-type="discord">Private Discord voting channel</li>
           </ul>
         </div>
         <div class="card iron">
@@ -62,10 +83,10 @@
           <div class="price">QoL & Customizations</div>
           <ul>
             <li>All benefits from Stone Tier</li>
-            <li>Priority login queue</li>
-            <li>Custom backpack skin (Sophisticated Backpacks)</li>
-            <li>Colored nametag</li>
-            <li>Voting power boost</li>
+            <li data-type="server">Priority login queue</li>
+            <li data-type="server">Custom backpack skin (Sophisticated Backpacks)</li>
+            <li data-type="server">Colored nametag</li>
+            <li data-type="discord">Voting power boost</li>
           </ul>
         </div>
         <div class="card diamond">
@@ -73,19 +94,19 @@
           <div class="price">Utility Perks</div>
           <ul>
             <li>All benefits from Iron Tier</li>
-            <li>You get 3x /home access</li>
-            <li>Cosmetic pets (non-combat, nameable)</li>
-            <li>Particle trails (toggleable)</li>
-            <li>Glow effects (cosmetic only)</li>
+            <li data-type="server">You get 3x /home access</li>
+            <li data-type="server">Cosmetic pets (non-combat, nameable)</li>
+            <li data-type="server">Particle trails (toggleable)</li>
+            <li data-type="server">Glow effects (cosmetic only)</li>
           </ul>
         </div>
         <div class="card god">
           <h3>Architect Tier – $20</h3>
           <div class="price">Automation Elite</div>
           <ul>
-            <li>All benefits from Architect Tier</li>
-            <li>Reserved server slot</li>
-            <li>Exclusive cosmetic trail & aura</li>
+            <li>All benefits from Diamond Tier</li>
+            <li data-type="server">Reserved server slot</li>
+            <li data-type="server">Exclusive cosmetic trail & aura</li>
           </ul>
         </div>
       </div>
