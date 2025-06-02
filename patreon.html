@@ -11,23 +11,27 @@
       text-align: center;
       margin-top: 3rem;
     }
+
     .donation-header h1 {
       color: #00b4ff;
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
+
     .donation-header p {
       color: #aaa;
       font-size: 1.1rem;
       max-width: 700px;
       margin: 0 auto;
     }
+
     .donation-subheading {
       font-size: 1.25rem;
       color: #0ff;
       margin-top: 3rem;
       text-align: center;
     }
+
     .donation-grid {
       max-width: 900px;
       margin: 1.5rem auto 3rem;
@@ -36,34 +40,45 @@
       gap: 2rem;
       padding: 0 1rem;
     }
+
     .donation-card {
       background-color: #1a1a1a;
       border: 1px solid #333;
       border-radius: 8px;
-      padding: 1.5rem;
       text-align: center;
+      padding: 1rem;
       transition: transform 0.2s ease;
     }
+
     .donation-card:hover {
       transform: translateY(-4px);
     }
-    .donation-card img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 0.5rem;
-    }
+
     .donation-card a {
       display: block;
-      font-weight: bold;
-      font-size: 1rem;
-      color: #00e0ff;
     }
+
+    .donation-card img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .donation-card img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 14px rgba(0, 255, 255, 0.3);
+    }
+
     @media (max-width: 480px) {
       .donation-grid {
         gap: 1rem;
       }
+
       .donation-card {
-        padding: 1rem;
+        padding: 0.75rem;
       }
     }
   </style>
@@ -86,28 +101,33 @@
   <div class="donation-subheading">💸 Donation Platforms</div>
   <section class="donation-grid">
     <div class="donation-card">
-      <img src="/assets/Patreon.png" alt="Patreon" />
-      <a href="https://patreon.com/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Patreon" title="Monthly perks & access">Become a Patron</a>
+      <a href="https://patreon.com/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Patreon">
+        <img src="/assets/Patreon.png" alt="Support via Patreon" />
+      </a>
     </div>
     <div class="donation-card">
-      <img src="/assets/KoFi.png" alt="Ko-fi" />
-      <a href="https://ko-fi.com/gkaze77" target="_blank" rel="noopener noreferrer" aria-label="Support via Ko-fi" title="One-time tip jar">Donate via Ko-fi</a>
+      <a href="https://ko-fi.com/gkaze77" target="_blank" rel="noopener noreferrer" aria-label="Support via Ko-fi">
+        <img src="/assets/KoFi.png" alt="Support via Ko-fi" />
+      </a>
     </div>
   </section>
 
   <div class="donation-subheading">📣 Social Support</div>
   <section class="donation-grid">
     <div class="donation-card">
-      <img src="/assets/YouTube.png" alt="YouTube" />
-      <a href="https://youtube.com/@GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via YouTube" title="Free channel subscription">Subscribe</a>
+      <a href="https://youtube.com/@GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+        <img src="/assets/YouTube.png" alt="YouTube Subscribe" />
+      </a>
     </div>
     <div class="donation-card">
-      <img src="/assets/Twitch.png" alt="Twitch" />
-      <a href="https://twitch.tv/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Twitch" title="Monthly Twitch sub">Twitch Sub</a>
+      <a href="https://twitch.tv/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Twitch Channel">
+        <img src="/assets/Twitch.png" alt="Twitch Sub" />
+      </a>
     </div>
     <div class="donation-card">
-      <img src="/assets/Discord.png" alt="Discord" />
-      <a href="https://discord.gg/X8eAkTJgnv" target="_blank" rel="noopener noreferrer" aria-label="Join the Discord server" title="Community & support">Join Discord</a>
+      <a href="https://discord.gg/X8eAkTJgnv" target="_blank" rel="noopener noreferrer" aria-label="Join Discord">
+        <img src="/assets/Discord.png" alt="Join Discord" />
+      </a>
     </div>
   </section>
 
