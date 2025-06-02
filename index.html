@@ -2,82 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KazeCraft – AE2 Modded Server</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="/assets/bannerbackground.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KazeCraft – GKaZe77 Modded Server</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f11;
+      color: #ccc;
+    }
+    header {
+      background-color: #121212;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    header nav a {
+      color: #87cefa;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    .hero {
+      background: linear-gradient(to right, #2a2d38, #1a1d26);
+      text-align: center;
+      padding: 5rem 1rem;
+      color: #eee;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #8dc5f4;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .status, .tiers, .install, .youtube {
+      background: #1c1c22;
+      border: 1px solid #2e2e33;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 0;
+      color: #8dc5f4;
+    }
+    .tier-cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      background: #23232b;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #87cefa;
+    }
+    .card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #aaa;
+    }
+    .patreon-link {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .patreon-link img {
+      width: 180px;
+    }
+    .youtube iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background-color: #0e0e0f;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+  <script>
+    async function fetchStatus() {
+      const res = await fetch("https://api.mcsrvstat.us/2/mc.gkaze77.com");
+      const data = await res.json();
+      const el = document.getElementById("server-status");
+      if (data.online) {
+        el.innerHTML = `🟢 <strong>Online:</strong> ${data.players.online}/${data.players.max} players – ${data.version}`;
+      } else {
+        el.innerHTML = `🔴 <strong>Offline</strong>`;
+      }
+    }
+    window.onload = fetchStatus;
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="ae2-title">KazeCraft</h1>
-      <p class="subtitle">Modded AE2 Minecraft Server</p>
-      <a href="#join" class="cta-btn">Join the Network</a>
-    </div>
+  <header>
+    <div><strong>KazeCraft</strong></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/minecraft">Minecraft</a>
+      <a href="/patreon">Patreon</a>
+    </nav>
   </header>
 
-  <nav class="main-nav">
-    <ul>
-      <li><a href="/">Main Site</a></li>
-      <li><a href="#tiers">Tiers</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#join">Join</a></li>
-    </ul>
-  </nav>
+  <div class="hero">
+    <h1>Welcome to KazeCraft</h1>
+    <p>Powered by FTB Plexiglass Mountain – a unique blend of AE2 tech, magic, and creativity.</p>
+  </div>
 
-  <section id="status" class="section">
-    <h2>Server Status</h2>
-    <div id="server-status" class="status-box">Loading...</div>
-  </section>
+  <main class="container">
+    <section class="status">
+      <h2>Server Status</h2>
+      <p id="server-status">Loading...</p>
+      <p><strong>IP:</strong> mc.gkaze77.com</p>
+    </section>
 
-  <section id="tiers" class="section">
-    <h2>Patreon Tiers</h2>
-    <div class="tier-grid">
-      <div class="tier-card stone">
-        <h3>Stone Tier – $3</h3>
-        <p>Supporter badge, Discord role, early access</p>
+    <section class="tiers">
+      <h2>Patreon Tiers</h2>
+      <div class="tier-cards">
+        <div class="card">
+          <h3>Stone Tier – $3</h3>
+          <div class="price">Cosmetic Supporter</div>
+          <ul>
+            <li>Discord badge + role</li>
+            <li>JourneyMap sync</li>
+            <li>Early patch previews</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Iron Tier – $7</h3>
+          <div class="price">QoL & Customizations</div>
+          <ul>
+            <li>Queue priority</li>
+            <li>Custom backpack skins</li>
+            <li>Colored nameplates</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Diamond Tier – $15</h3>
+          <div class="price">Utility Perks</div>
+          <ul>
+            <li>3x /home access</li>
+            <li>Custom cosmetic pets</li>
+            <li>Trail & glow effects</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>AE2 God Tier – $25</h3>
+          <div class="price">Automation Elite</div>
+          <ul>
+            <li>Creative wireless AE2 terminal</li>
+            <li>Reserved slot access</li>
+            <li>Exclusive trail & aura</li>
+          </ul>
+        </div>
       </div>
-      <div class="tier-card iron">
-        <h3>Iron Tier – $7</h3>
-        <p>Queue priority, name in credits</p>
+      <div class="patreon-link">
+        <a href="https://www.gkaze77.com" target="_blank">
+          <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron" />
+        </a>
       </div>
-      <div class="tier-card diamond">
-        <h3>Diamond Tier – $15</h3>
-        <p>Reserved slot, voting power</p>
-      </div>
-      <div class="tier-card god">
-        <h3>AE2 God – $25</h3>
-        <p>Server-side perks, mod vote rights, guaranteed spot</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="news" class="section">
-    <h2>Server News</h2>
-    <ul class="news-feed">
-      <li><strong>[5/31/25]</strong> Server deployed to KVM4 – uptime goal is 24/7</li>
-      <li><strong>[5/29/25]</strong> Modpack: AllTheMods 10 (ATM10) selected</li>
-      <li><strong>[5/22/25]</strong> Patreon integration logic finalized</li>
-    </ul>
-  </section>
+    <section class="install">
+      <h2>Modpack Info</h2>
+      <p>This server runs <strong>FTB Plexiglass Mountain</strong> for Minecraft 1.18.2 (Forge 40.1+). Install via:</p>
+      <ul>
+        <li><a href="https://www.feed-the-beast.com/modpacks/96-ftb-plexiglass-mountain" target="_blank">FTB Launcher – Plexiglass Mountain</a></li>
+      </ul>
+      <p>Recommended RAM: 6–8GB. Java 17 required.</p>
+    </section>
 
-  <section id="join" class="section">
-    <h2>Join KazeCraft</h2>
-    <p>IP Address: <code>mc.gkaze77.com</code></p>
-    <p>Whitelist required – apply via our <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a></p>
-    <a href="https://www.patreon.com/GKaZe77" target="_blank" class="cta-btn">Support on Patreon</a>
-  </section>
+    <section class="youtube">
+      <h2>Server Trailer</h2>
+      <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=CactusBoi6481" allowfullscreen></iframe>
+    </section>
+  </main>
 
-  <section id="countdown" class="section">
-    <h2>Countdown to 2027 Term Renewal</h2>
-    <div id="renewal-timer" class="timer-box">Loading...</div>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 GKaZe77. All rights reserved.</p>
+  <footer>
+    &copy; 2025 GKaZe77. All rights reserved.
   </footer>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
