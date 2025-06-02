@@ -7,64 +7,41 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" href="/assets/icons/icon.png" type="image/png" />
   <style>
-    .donation-header {
+    body {
+      background-color: #0b0b0b;
+      margin: 0;
       text-align: center;
-      margin-top: 3rem;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ccc;
     }
-    .donation-header h1 {
+    .main-header {
+      padding: 1rem 2rem;
+      background-color: #121212;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .main-nav a {
       color: #00b4ff;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
     }
-    .donation-header p {
-      color: #aaa;
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .main-nav a:hover {
+      text-decoration: underline;
     }
-    .donation-subheading {
-      font-size: 1.25rem;
-      color: #0ff;
-      margin-top: 3rem;
-      text-align: center;
-    }
-    .donation-grid {
-      max-width: 900px;
-      margin: 1.5rem auto 3rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
-      padding: 0 1rem;
-    }
-    .donation-card {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .donation-card:hover {
-      transform: translateY(-4px);
-    }
-    .donation-card img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 0.5rem;
-    }
-    .donation-card a {
+    .donation-image {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      margin: 2rem auto;
       display: block;
-      font-weight: bold;
-      font-size: 1rem;
-      color: #00e0ff;
     }
-    @media (max-width: 480px) {
-      .donation-grid {
-        gap: 1rem;
-      }
-      .donation-card {
-        padding: 1rem;
-      }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #121212;
+      color: #aaa;
     }
   </style>
 </head>
@@ -78,38 +55,17 @@
     </nav>
   </header>
 
-  <main class="donation-header">
-    <h1>Support GKaZe77</h1>
-    <p>Help fund the server, content creation, and future upgrades. Every contribution means a lot!</p>
+  <main>
+    <img src="/assets/PatreonLinks.png" usemap="#support-links" class="donation-image" alt="Support GKaZe77" />
+
+    <map name="support-links">
+      <area shape="rect" coords="120,180,520,300" href="https://patreon.com/GKaZe77" alt="Patreon" target="_blank" />
+      <area shape="rect" coords="680,180,1080,300" href="https://ko-fi.com/gkaze77" alt="Ko-fi" target="_blank" />
+      <area shape="rect" coords="100,380,500,500" href="https://youtube.com/@GKaZe77" alt="YouTube" target="_blank" />
+      <area shape="rect" coords="520,380,920,500" href="https://twitch.tv/GKaZe77" alt="Twitch" target="_blank" />
+      <area shape="rect" coords="940,380,1340,500" href="https://discord.gg/X8eAkTJgnv" alt="Discord" target="_blank" />
+    </map>
   </main>
-
-  <div class="donation-subheading">💸 Donation Platforms</div>
-  <section class="donation-grid">
-    <div class="donation-card">
-      <img src="/assets/icons/patreon.png" alt="Patreon" />
-      <a href="https://patreon.com/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Patreon" title="Monthly perks & access">Become a Patron</a>
-    </div>
-    <div class="donation-card">
-      <img src="/assets/icons/ko-fi.png" alt="Ko-fi" />
-      <a href="https://ko-fi.com/gkaze77" target="_blank" rel="noopener noreferrer" aria-label="Support via Ko-fi" title="One-time tip jar">Donate via Ko-fi</a>
-    </div>
-  </section>
-
-  <div class="donation-subheading">📣 Social Support</div>
-  <section class="donation-grid">
-    <div class="donation-card">
-      <img src="/assets/icons/youtube.png" alt="YouTube" />
-      <a href="https://youtube.com/@GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via YouTube" title="Free channel subscription">Subscribe</a>
-    </div>
-    <div class="donation-card">
-      <img src="/assets/icons/twitch.png" alt="Twitch" />
-      <a href="https://twitch.tv/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Twitch" title="Monthly Twitch sub">Twitch Sub</a>
-    </div>
-    <div class="donation-card">
-      <img src="/assets/icons/discord.png" alt="Discord" />
-      <a href="https://discord.gg/X8eAkTJgnv" target="_blank" rel="noopener noreferrer" aria-label="Join the Discord server" title="Community & support">Join Discord</a>
-    </div>
-  </section>
 
   <footer class="footer">
     &copy; 2025 GKaZe77. All rights reserved.
