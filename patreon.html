@@ -19,6 +19,13 @@
     .donation-header p {
       color: #aaa;
       font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .donation-subheading {
+      font-size: 1.25rem;
+      color: #0ff;
+      margin-top: 2rem;
     }
     .donation-grid {
       max-width: 900px;
@@ -50,6 +57,14 @@
       font-size: 1rem;
       color: #00e0ff;
     }
+    @media (max-width: 480px) {
+      .donation-grid {
+        gap: 1rem;
+      }
+      .donation-card {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -58,39 +73,36 @@
     <nav class="main-nav">
       <a href="/">Home</a>
       <a href="/wiki">Wiki</a>
-      <a href="/minecraft">Minecraft</a>
+      <a href="https://github.com/GKaZe77/gkaze77-minecraft-site" rel="noopener noreferrer" target="_blank">GitHub</a>
     </nav>
   </header>
 
   <main class="donation-header">
     <h1>Support GKaZe77</h1>
     <p>Help fund the server, content creation, and future upgrades. Every contribution means a lot!</p>
+    <div class="donation-subheading">Choose your support platform:</div>
   </main>
 
   <section class="donation-grid">
     <div class="donation-card">
       <img src="/assets/icons/patreon.png" alt="Patreon" />
-      <a href="https://patreon.com/GKaZe77" target="_blank">Become a Patron</a>
+      <a href="https://patreon.com/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Patreon" title="Monthly perks & access">Become a Patron</a>
     </div>
     <div class="donation-card">
       <img src="/assets/icons/youtube.png" alt="YouTube" />
-      <a href="https://youtube.com/@GKaZe77" target="_blank">Subscribe / Join</a>
+      <a href="https://youtube.com/@GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via YouTube" title="Free channel subscription">Subscribe</a>
     </div>
     <div class="donation-card">
       <img src="/assets/icons/twitch.png" alt="Twitch" />
-      <a href="https://twitch.tv/GKaZe77" target="_blank">Twitch Sub / Tip</a>
+      <a href="https://twitch.tv/GKaZe77" target="_blank" rel="noopener noreferrer" aria-label="Support via Twitch" title="Monthly Twitch sub">Twitch Sub</a>
     </div>
     <div class="donation-card">
       <img src="/assets/icons/ko-fi.png" alt="Ko-fi" />
-      <a href="https://ko-fi.com/gkaze77" target="_blank">Donate via Ko-fi</a>
-    </div>
-    <div class="donation-card">
-      <img src="/assets/icons/paypal.png" alt="PayPal" />
-      <a href="https://paypal.me/GKaZe77" target="_blank">Tip on PayPal</a>
+      <a href="https://ko-fi.com/gkaze77" target="_blank" rel="noopener noreferrer" aria-label="Support via Ko-fi" title="One-time tip jar">Donate via Ko-fi</a>
     </div>
     <div class="donation-card">
       <img src="/assets/icons/discord.png" alt="Discord" />
-      <a href="https://discord.gg/X8eAkTJgnv" target="_blank">Join Discord</a>
+      <a href="https://discord.gg/X8eAkTJgnv" target="_blank" rel="noopener noreferrer" aria-label="Join the Discord server" title="Community & support">Join Discord</a>
     </div>
   </section>
 
