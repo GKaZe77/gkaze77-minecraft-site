@@ -143,3 +143,26 @@ h2 {
   background-color: #121212;
   color: #aaa;
 }
+/* === Header Cleanup === */
+.main-header {
+  background-color: #121212;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.main-nav a {
+  color: #87cefa;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.patreon-button {
+  height: 28px;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
