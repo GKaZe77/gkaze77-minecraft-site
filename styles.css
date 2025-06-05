@@ -17,17 +17,36 @@ a:hover {
 
 /* === Hero === */
 .hero {
+  position: relative;
   background: url("assets/bannerbackground.png") no-repeat center center;
   background-size: cover;
   padding: 4rem 2rem;
   text-align: center;
   color: white;
   box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  overflow: hidden;
 }
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
+  z-index: 0;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* soft shadow for pop */
+}
+
 .hero-content {
   max-width: 700px;
   margin: auto;
 }
+
 .ae2-title {
   font-size: 3rem;
   margin: 0;
